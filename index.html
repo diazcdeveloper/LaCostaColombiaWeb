@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <link rel="stylesheet" href="global-styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link rel="stylesheet" href="map.css" />
+    <title>La Costa Colombia</title>
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <a class="logo" href=""><img src="/images/logo.png" alt="" /></a>
+      <ul class="enlaces" id="enlaces">
+        <li class="enlace"><a href="#navbar">Home</a></li>
+        <li class="enlace"><a href="#quienessomos">Who We Are</a></li>
+        <li class="enlace"><a href="#quehacemos">What We Do</a></li>
+        <li class="enlace"><a href="#comoayudar">How To Help</a></li>
+        <li class="enlace"><a href="#noticias">News</a></li>
+      </ul>
+
+      <!-- <a
+        class="boton btn-donaciones"
+        href="https://buy.stripe.com/eVacNFeLnb7saEo3cc"
+        >Donate</a
+      > -->
+      <div class="donacionnavidad">
+        <!-- <img class="sombrero" src="images/sombrero.webp" alt="">-->
+        <a class="boton btn-donaciones" href="donation.html">Donate</a>
+      </div>
+
+      <div class="menu" id="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+
+    <header class="header" id="header">
+      <video preload="none" playsinline autoplay muted loop>
+        <source src="/images/headerVideo2.mp4" type="video/mp4" />
+      </video>
+      <video preload="none" playsinline autoplay muted loop>
+        <source src="/images/headerMovile2.mp4" type="video/mp4" />
+      </video>
+    </header>
+
+
+    <!-- WHERE WE ARE - inicio sección mapa
+         Para retirar: elimina este bloque completo y el archivo map.css -->
+    <section class="donde-estamos" id="donde-estamos">
+      <div class="donde-estamos-header">
+        <h2 class="subtitulo">Where We Are</h2>
+        <p class="parrafo">
+          From the shores of the Caribbean to the Pacific coast, we are present
+          where the need is greatest. Explore the locations where our partners
+          are leading sustainable change and bringing hope to the heart of
+          Colombia, Use this map to discover the vibrant missions and foundations 
+          we empower in every region.
+        </p>
+      </div>
+      <div id="donde-estamos-map" class="donde-estamos-map"></div>
+    </section>
+    <!-- WHERE WE ARE - fin sección mapa -->
+
+        <section class="mision-vision" id="mision-vision">
+      <div class="mision-vision-block">
+        <h2 class="subtitulo">Mission</h2>
+        <p class="parrafo">
+          To strengthen and equip Christian leaders and local foundations across
+          Colombia's Caribbean and Pacific regions. We serve as a strategic
+          bridge—providing the resources, spiritual accompaniment, and visibility
+          necessary for national ministries to lead sustainable transformation in
+          their own communities through health, education, and the Gospel of
+          Jesus Christ.
+        </p>
+      </div>
+      <div class="mision-vision-divider"></div>
+      <div class="mision-vision-block">
+        <h2 class="subtitulo">Vision</h2>
+        <p class="parrafo">
+          To see the Colombian coast transformed by a vibrant network of
+          self-sustaining local ministries. We envision a future where every
+          community is led by empowered national leaders, and where the faithful
+          service of the Colombian church is recognized and supported by the
+          global body of Christ.
+        </p>
+      </div>
+    </section>
+
+    <section class="quienessomos" id="quienessomos">
+      <div class="letf-quiene_somos">
+        <img loading="lazy" src="/images/quienessomos.png" alt="" />
+      </div>
+      <div class="right-quienes_somos">
+        <h1 class="subtitulo">La Costa Colombia</h1>
+        <p class="parrafo">
+          We are a mission that supports missions and churches on the Colombian
+          coast. Over the last 10 years, we have met great missionaries and
+          pastors who were already working in their neighborhoods, and after
+          witnessing the good work being done firsthand, La Costa Colombia began
+          building spiritual and financial support relationships. <br />
+          <br />
+          Our directors are based in the United States, from where they
+          coordinate missionary trips, children’s dining halls, medical
+          missions, and all kinds of events related to the comprehensive care of
+          the community. All the rest of our collaborators working with La Costa
+          Colombia are located in the various cities where we have been able to
+          travel so far.
+        </p>
+      </div>
+    </section>
+
+    <section class="quehacemos" id="quehacemos">
+      <div class="letf-que_hacemos">
+        <h2 class="subtitulo">What We Do?</h2>
+        <p class="parrafo">
+          We collaborate with several congregations and missions in the cities
+          of Barranquilla, Santa Marta, Sincelejo, and Buenaventura. Each of
+          them carries out their own missions, focused on feeding and educating
+          children, supporting and training young parents, and promoting
+          community health and medical programs. <br />
+          <br />
+          Additionally, we consider it essential to pray for and support the
+          local pastors. Our team regularly meets with pastors online, and we
+          occasionally organize retreats to provide them with rest, training,
+          and encouragement.
+        </p>
+      </div>
+      <div class="right-que_hacemos">
+        <img loading="lazy" src="/images/quehacemos.png" alt="" />
+        <a class="boton btn-ministries" href="/ministries.html"
+          >Explore Our Ministries</a
+        >
+      </div>
+    </section>
+
+    <!-- LEGADO / IMPACT -->
+    <section class="legado" id="legado">
+      <div class="legado-header">
+        <h2 class="subtitulo">A Legacy of Transformation</h2>
+        <p class="parrafo">
+          Through the grace of God and the generosity of our supporters, we have
+          achieved the following over the last decade.
+        </p>
+      </div>
+      <div class="legado-grid">
+
+        <div class="legado-card">
+          <span class="legado-number" data-target="200" data-suffix="+">0</span>
+          <h3 class="legado-label">Children Fed Daily</h3>
+          <p class="legado-desc">Meals most days of the week across our centers in Barranquilla and Buenaventura.</p>
+        </div>
+
+        <div class="legado-card">
+          <span class="legado-number" data-target="80" data-suffix="+">0</span>
+          <h3 class="legado-label">Scholarships Granted</h3>
+          <p class="legado-desc">Young adults have received life-changing scholarships to pursue professional studies.</p>
+        </div>
+
+        <div class="legado-card">
+          <span class="legado-number" data-target="3000" data-suffix="+">0</span>
+          <h3 class="legado-label">Free Medical Consultations</h3>
+          <p class="legado-desc">Individuals served through our alliances with FAME and the Salud Hoy Foundation.</p>
+        </div>
+
+        <div class="legado-card">
+          <span class="legado-number" data-target="200" data-suffix="+">0</span>
+          <h3 class="legado-label">Families Reached</h3>
+          <p class="legado-desc">Families reached with the Gospel through water purification systems in partnership with Filter of Hope.</p>
+        </div>
+
+        <div class="legado-card">
+          <span class="legado-number legado-number--static">Active</span>
+          <h3 class="legado-label">Disaster &amp; Medical Relief</h3>
+          <p class="legado-desc">Ongoing distribution of medical supplies and emergency aid in Santa Marta and remote Caribbean townships.</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- FIN LEGADO -->
+
+    <section class="comoayudar" id="comoayudar">
+      <div class="donacionnavidad">
+        <!-- <img class="sombrero" src="images/sombrero.webp" alt="">-->
+        <a class="boton btn-donate" href="donation.html">Donate</a>
+      </div>
+
+      <div class="comoayudar-content">
+        <h2 class="subtitulo">Make an Impact By Donating Today</h2>
+        <p class="parrafo">
+          Your support can make a significant difference in the lives of
+          thousands of families across the Colombian coast. By donating, you are
+          helping to feed and educate children, strengthen young parents, and
+          improve health in vulnerable communities. <br />
+          <br />You are also providing rest and support to local pastors who
+          work tirelessly to bring hope to their communities. Join us in this
+          mission and contribute to a better future for those who need it most.
+          Your donation transforms lives!
+        </p>
+        <video preload="none" playsinline autoplay muted loop>
+          <source src="/images/ayuda.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <a class="boton btn-support" href="/partners.html">Support & Partners</a>
+    </section>
+
+    <section class="noticias" id="noticias">
+      <div class="left-noticias">
+        <h2 class="subtitulo">News</h2>
+        <p class="parrafo">
+          December is here, and our boys and girls have already started getting
+          gifts that encourage their hearts to keep on dreaming.
+          <br />
+          <br />
+          Just like them, there are many more people waiting to meet their basic
+          needs during these holidays. They are hoping to be able to care for
+          their loved ones and bring joy to their kids.
+          <br />
+          <br />
+          We want you to join us, along with all the missions, churches, and
+          organizations we work with, to bring God's word and hope to homes
+          along the coast of Colombia.
+        </p>
+        <a class="boton btn-ministries" href="/news.html">More News</a>
+      </div>
+
+      <div class="right-noticias">
+        <img src="images/news/regalos.jpg" alt="" />
+        <a
+          class="boton btn-ministries"
+          href="https://buy.stripe.com/eVacNFeLnb7saEo3cc"
+          >Donate</a
+        >
+      </div>
+    </section>
+
+    <footer class="footer" id="footer">
+      <div class="ubicacion">
+        <h2 class="subtitulo">USA</h2>
+        <p class="parrafo">7720 SURREY DR <br />INDIANAPOLIS IN 46227</p>
+        <p class="parrafo tax">
+          La Costa Colombia is a 501 (c) (3) charitable organization and all
+          contributions are tax deductible.
+        </p>
+        <a class="boton btn-donaciones" href="donation.html">Donate</a>
+      </div>
+
+      <div class="redes-sociales">
+        <h2 class="subtitulo">Follow Us</h2>
+        <div class="icons">
+          <a
+            href="https://www.facebook.com/ColombianCoastalMission"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              data-name="Layer 1"
+              viewBox="0 0 24 24"
+              id="facebook-f"
+            >
+              <path
+                fill="#222222"
+                d="M15.12,5.32H17V2.14A26.11,26.11,0,0,0,14.26,2C11.54,2,9.68,3.66,9.68,6.7V9.32H6.61v3.56H9.68V22h3.68V12.88h3.06l.46-3.56H13.36V7.05C13.36,6,13.64,5.32,15.12,5.32Z"
+              ></path>
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/lacosta_colombia/" target="_blank">
+          </a>
+
+          <a href="https://www.youtube.com/@LaCostaColombia" target="_blank">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              data-name="Layer 1"
+              viewBox="0 0 24 24"
+              id="youtube"
+            >
+              <path
+                fill="#222222"
+                d="M23,9.71a8.5,8.5,0,0,0-.91-4.13,2.92,2.92,0,0,0-1.72-1A78.36,78.36,0,0,0,12,4.27a78.45,78.45,0,0,0-8.34.3,2.87,2.87,0,0,0-1.46.74c-.9.83-1,2.25-1.1,3.45a48.29,48.29,0,0,0,0,6.48,9.55,9.55,0,0,0,.3,2,3.14,3.14,0,0,0,.71,1.36,2.86,2.86,0,0,0,1.49.78,45.18,45.18,0,0,0,6.5.33c3.5.05,6.57,0,10.2-.28a2.88,2.88,0,0,0,1.53-.78,2.49,2.49,0,0,0,.61-1,10.58,10.58,0,0,0,.52-3.4C23,13.69,23,10.31,23,9.71ZM9.74,14.85V8.66l5.92,3.11C14,12.69,11.81,13.73,9.74,14.85Z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="back-to-up" id="back-to-up">
+      <a href="#navbar">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 32 32"
+          id="up-arrow"
+        >
+          <path
+            d="M26 22a2 2 0 0 1-1.41-.59L16 12.83l-8.59 8.58a2 2 0 0 1-2.82-2.82l10-10a2 2 0 0 1 2.82 0l10 10A2 2 0 0 1 26 22Z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Modal -->
+    <!-- <div id="myModal" class="modal">
+      <div class="modal-content">
+        <a
+        class="boton btn-donaciones"
+        href="donation.html"
+        >Donate</a
+      >
+          <h2>¡Bienvenido!</h2>
+          <p>Come closer to the hearts of the children we serve at our dining room in the Las Flores neighborhood, Barranquilla, Colombia.<br>Your support helps us nurture their futures.</p>
+          <img class="comedor slide-fwd-center" src="images/comedor.jpg" alt="">
+
+          <a class="boton" href="https://www.instagram.com/fundacionconstruyendocasafirme/" target="_blank">
+            Discover more here
+          </a>
+        
+
+        <span class="close">Close</span>
+      </div>
+  </div> -->
+
+    <!-- <div id="myModal" class="modal">
+    <div class="modal-content">
+      <a
+      class="boton btn-donaciones"
+      href="https://buy.stripe.com/fZu7sLbBf65YgTZ2mS3Nm06"
+      >Donate</a
+    >
+        <h2>¡Bienvenido!</h2>
+        <p>We’re excited to send a team of 5 missionaries to Argentina to partner with Iglesia de La Paz in San Miguel del Monte. <br>They’ll lead a Women’s Conference, teaching preventative healthcare, life skills, and Bible studies to 65+ women.
+          <br>
+          <strong >Donations are welcome!</strong>
+           </p>
+        <img class="comedor slide-fwd-center" src="images/trips/toArgentina.jpg" alt="">
+
+        <a class="boton" href="https://www.instagram.com/fundacionconstruyendocasafirme/" target="_blank">
+          Discover more here
+        </a>
+      
+
+      <span class="close">Close</span>
+    </div>
+</div> -->
+
+    <script src="menu-responsive.js"></script>
+    <script src="modal.js"></script>
+
+    <!-- LEGADO COUNTER ANIMATION -->
+    <script>
+      (function () {
+        const counters = document.querySelectorAll('.legado-number[data-target]');
+        if (!counters.length) return;
+
+        const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+
+        function animateCounter(el) {
+          const target = parseInt(el.dataset.target, 10);
+          const suffix = el.dataset.suffix || '';
+          const duration = 1800;
+          const start = performance.now();
+
+          function tick(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const value = Math.round(easeOutCubic(progress) * target);
+            el.textContent = value.toLocaleString() + suffix;
+            if (progress < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        }
+
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting && !entry.target.dataset.animated) {
+              entry.target.dataset.animated = '1';
+              animateCounter(entry.target);
+            }
+          });
+        }, { threshold: 0.4 });
+
+        counters.forEach(function (el) { observer.observe(el); });
+      })();
+    </script>
+
+    <!-- LEAFLET MAP SCRIPT - inicio
+         Para retirar: elimina este bloque y el <script src="map.js"> -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <script src="map.js"></script>
+    <!-- LEAFLET MAP SCRIPT - fin -->
+  </body>
+</html>

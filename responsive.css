@@ -1,0 +1,379 @@
+@media (max-width: 1000px) {
+  /* MENU HAMBURGUESA */
+
+  .menu {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+    z-index: 2;
+    transition: all 1s;
+  }
+
+  .menu div {
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    border-radius: 2px;
+    transition: all 0.5s;
+  }
+
+  .menu.close div:nth-of-type(1) {
+    transform: rotate(45deg) translateY(5px);
+  }
+
+  .menu.close div:nth-of-type(2) {
+    display: none;
+  }
+
+  .menu.close div:nth-of-type(3) {
+    transform: rotate(-45deg) translateY(-5px);
+  }
+
+  .menu.close {
+    transform: translate(4px);
+  }
+
+  .enlaces {
+    background: white;
+    background-image: url("/images/banderaOpacity.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    z-index: 1;
+    transition: all 0.5s;
+  }
+
+  .enlaces li a {
+    color: var(--color-bg-dark);
+    font-size: 2rem;
+  }
+
+  .enlaces.open {
+    left: 0;
+  }
+
+  /* NAVBAR */
+
+  .navbar {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .navbar .logo img {
+    width: 100px;
+  }
+
+  .navbar .btn-donaciones {
+    font-size: 0.8rem;
+  }
+
+  .sombrero {
+  position: absolute;
+  width: 70px;
+  right: -35px;
+  top: -35px;
+}
+
+  /* HEADER */
+
+  .header {
+    display: flex;
+    height: auto;
+    width: 100%;
+  }
+
+  .header :nth-child(1) {
+    display: none;
+  }
+
+  .header :nth-child(2) {
+    display: block;
+    width: auto;
+  }
+
+  /* QUIENES SOMOS */
+
+  .quienessomos {
+    width: 80%;
+    height: auto;
+
+    gap: 2rem;
+    flex-direction: column-reverse;
+
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .quienessomos .letf-quiene_somos {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .quienessomos .letf-quiene_somos img {
+    width: 300px;
+  }
+
+  .quienessomos .right-quienes_somos {
+    width: 100%;
+    height: 70%;
+
+    background-size: 100%;
+  }
+
+  .subtitulo {
+    font-size: 2rem;
+  }
+
+  /* QUE HACEMOS */
+
+  /* MISION Y VISION */
+
+  .mision-vision {
+    flex-direction: column;
+    gap: 2.5rem;
+    padding: 8% 8%;
+    height: auto;
+  }
+
+  .mision-vision-divider {
+    width: 100%;
+    height: 1px;
+    align-self: auto;
+  }
+
+  /* LEGADO */
+
+  .legado {
+    padding: 8% 8%;
+    gap: 2.5rem;
+  }
+
+  .legado-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .legado-number {
+    font-size: 2.2rem;
+  }
+
+  /* QUE HACEMOS */
+
+  .quehacemos {
+    width: 100%;
+    height: auto;
+
+    flex-direction: column;
+    gap: 2rem;
+
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .quehacemos .letf-que_hacemos {
+    height: 70%;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .quehacemos .right-que_hacemos {
+    height: 30%;
+    width: 100%;
+  }
+
+  .quehacemos .right-que_hacemos img {
+    width: 300px;
+  }
+
+  /* COMO AYUDAR */
+
+  .comoayudar {
+    width: 80%;
+    height: auto;
+
+    justify-content: center;
+    gap: 2rem;
+
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .comoayudar .comoayudar-content {
+    gap: 1rem;
+
+    width: 100%;
+  }
+
+  .comoayudar .comoayudar-content video {
+    width: 350px;
+  }
+
+.comoayudar .btn-support {
+  font-size: 1rem;
+  padding: 10px 20px;
+}
+
+  /* NOTICIAS */
+
+  .noticias {
+    height: auto;
+
+    flex-direction: column;
+    gap: 3rem;
+
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .noticias .left-noticias {
+    width: 90%;
+
+    padding-top: 10%;
+    padding-left: 10%;
+  }
+
+  .noticias .left-noticias .facebook {
+    display: none;
+  }
+
+  .noticias .right-noticias {
+    width: 100%;
+    height: 100%;
+
+    padding-right: 0%;
+  }
+
+  .noticias img {
+    width: 300px;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    height: auto;
+
+    flex-direction: column;
+    gap: 3rem;
+
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .footer .ubicacion {
+    width: 100%;
+  }
+
+  .footer .tax {
+    font-size: 0.6rem;
+    width: 80%;
+    text-align: center;
+  }
+
+  .footer .redes-sociales {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  /* BOTON BACK TO UP */
+
+  .back-to-up {
+    width: 45px;
+    height: 45px;
+
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+
+    background-color: white;
+
+    border-radius: 100%;
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .back-to-up a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .back-to-up svg {
+    width: 80%;
+  }
+
+  /* --------------- DONATION PAGE-------------------- */
+
+  .donation-button-section {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+
+    padding-top: 120px;
+    padding-bottom: 50px;
+
+    text-align: center;
+  }
+
+  .regular-donation-button {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .suscription-donation-button {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background-color: var(--color-bg-dark);
+  }
+}
+
+@media (max-width: 500px) {
+  .header :nth-child(2) {
+    width: 100%;
+  }
+
+  .comedor {
+    width: 200px;
+  }
+}

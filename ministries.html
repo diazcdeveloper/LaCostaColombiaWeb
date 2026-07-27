@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <link rel="stylesheet" href="global-styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <title>Ministries La Costa Colombia</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 50px;
+        font-size: 2.5em;
+      }
+
+      .ministerios-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 20px;
+      }
+
+      .ministerio-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        min-height: 350px;
+      }
+
+      .ministerio-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card-image {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .card-content {
+        padding: 20px;
+        position: relative;
+        background: white;
+      }
+
+      .card-content h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      .card-content p {
+        color: #666;
+        font-size: 0.9em;
+        line-height: 1.5;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .ministerio-card:hover .overlay {
+        opacity: 1;
+      }
+
+      /* INFO SECTION */
+      .ministerios-info {
+        margin-bottom: 60px;
+      }
+
+      .ministerios-info .region {
+        margin-bottom: 40px;
+      }
+
+      .ministerios-info .region-title {
+        font-size: 1.2em;
+        font-weight: 700;
+        color: #222222;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #222222;
+        margin-bottom: 20px;
+      }
+
+      .ministerios-info .ministry-item {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 16px;
+        padding: 16px 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        line-height: 1.6;
+      }
+
+      .ministry-item {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ministerios-info .ministry-item .ministry-name {
+        font-weight: 700;
+        color: #2c3e50;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .ministerios-info .ministry-item p {
+        color: #555;
+        font-size: 0.9em;
+      }
+
+      /* NO-PHOTO CARD */
+      .card-no-photo {
+        height: 200px;
+        background-color: #222222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+
+      .card-no-photo span {
+        color: rgba(255,255,255,0.3);
+        font-size: 0.85em;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 768px) {
+        .ministerios-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ministerios-info .ministry-item {
+          flex-direction: column;
+          gap: 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <a class="logo" href="index.html"
+        ><img src="/images/logo.png" alt=""
+      /></a>
+      <ul class="enlaces" id="enlaces">
+        <li class="enlace"><a href="index.html">Home</a></li>
+      </ul>
+
+      <!-- <a
+          class="boton btn-donaciones"
+          href="https://buy.stripe.com/eVacNFeLnb7saEo3cc"
+          >Donate</a
+        > -->
+
+      <a class="boton btn-donaciones" href="donation.html">Donate</a>
+
+      <div class="menu" id="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Ministries supported by La Costa Colombia</h1>
+
+      <!-- MINISTRY DESCRIPTIONS BY REGION -->
+      <div class="ministerios-info">
+
+        <div class="region">
+          <h2 class="region-title">Barranquilla &amp; The Caribbean Coast</h2>
+
+          <div class="ministry-item">
+            <span class="ministry-name">Casa Firme &amp; Construyendo Casa Firme</span>
+            <p>Led by Pastors Rogelio Torres and Elida Camargo, this partnership manages our flagship project: a Children's Feeding Center that provides daily nutrition and care. They also oversee our higher-education scholarship programs and micro-finance initiatives (interest-free loans) for small community businesses.</p>
+          </div>
+
+          <div class="ministry-item">
+            <span class="ministry-name">La Pesca Milagrosa</span>
+            <p>Under the leadership of Pastor Jose Jimenez, this ministry reaches six locations in Barranquilla and surrounding rural areas. We support their missionary journeys to hard-to-reach villages and provide scholarships for their youth leaders.</p>
+          </div>
+
+          <div class="ministry-item">
+            <span class="ministry-name">Fundepcar</span>
+            <p>Located in the Las Flores neighborhood, Director Carlos Gomez uses sports as a powerful tool to mentor at-risk youth and provide an alternative to the cycles of violence in the area.</p>
+          </div>
+
+          <div class="ministry-item">
+            <span class="ministry-name">Embajadores de Zion (Sincelejo)</span>
+            <p>Nestled in the "Peña de Horeb" area near Corozal, Pastors German and Juana Acosta lead efforts to support the elderly in rural towns, fostering entrepreneurship and providing essential medical and food supplies.</p>
+          </div>
+        </div>
+
+        <div class="region">
+          <h2 class="region-title">The Pacific Region: Buenaventura</h2>
+
+          <div class="ministry-item">
+            <span class="ministry-name">Mahanaim Buenaventura</span>
+            <p>We support Sister Josefina De Avila, a dedicated missionary and leader. Our efforts here focus on a children's feeding center and providing theological support to strengthen the local church's doctrine and outreach.</p>
+          </div>
+        </div>
+
+        <div class="region">
+          <h2 class="region-title">Indigenous Outreach: La Guajira</h2>
+
+          <div class="ministry-item">
+            <span class="ministry-name">Salud Hoy Foundation</span>
+            <p>Led by Dr. Tony Argote, this medical mission travels every two months to the desert regions of La Guajira. They provide free healthcare and life-saving medicine to the Wayuu indigenous communities, while simultaneously training local Christian leaders in the Word of God.</p>
+          </div>
+        </div>
+
+      </div>
+      <!-- END MINISTRY DESCRIPTIONS -->
+
+      <div class="ministerios-grid">
+        <!-- Repetir este bloque para cada ministerio -->
+
+        
+
+        <div class="ministerio-card">
+          <div
+            class="card-image"
+            style="background-image: url('images/ministries1.jpg')"
+          >
+            <div class="overlay">
+              <p>Children from the children's dining room gathered in the hall of the Casa Firme church</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>CONSTRUYENDO CASA FIRME <br> </h3>
+            <p>
+              Children's dining room in the Las Flores neighborhood.
+            </p>
+            <br>
+            <a class="boton" href="/galeryconstruyendocasafirme.html">Galery</a>
+          </div>
+        </div>
+        <!-- Repetir hasta 6 ministerios -->
+        <div class="ministerio-card">
+          <div
+            class="card-image"
+            style="background-image: url('images/ministries2.jpg')"
+          >
+            <div class="overlay">
+              <p>members of the congregations and medical mission team</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>PESCA MILAGROSA</h3>
+            <p>
+              They are a group of 7 churches that bring the word of God to towns and hard-to-reach areas.
+            </p>
+            <br>
+            <a class="boton" href="/galerypescamilagrosa.html">Galery</a>
+          </div>
+        </div>
+        <!-- Repetir hasta 6 ministerios -->
+        <div class="ministerio-card">
+          <div
+            class="card-image"
+            style="background-image: url('images/ministries3.jpg')"
+          >
+            <div class="overlay">
+              <p>Descripción breve del ministerio o frase impactante</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>MISION SALUD HOY</h3>
+            <p>
+              They bring the word of God, training, and medical care to the indigenous territory of La Guajira, Colombia.
+            </p>
+            <br>
+            <a class="boton" href="/galerysaludhoy.html">Galery</a>
+          </div>
+        </div>
+
+
+        <!-- Repetir hasta 6 ministerios -->
+
+                <div class="ministerio-card">
+          <div
+            class="card-image"
+            style="background-image: url('images/galeryfundepcar/fundepcar.jpg')"
+          >
+            <div class="overlay">
+              <p>Descripción breve del ministerio o frase impactante</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>FUNDEPCAR</h3>
+            <p>
+              This wonderful project uses sports to connect youth in underserved communities with God.
+            </p>
+            <br>
+            <a class="boton" href="/galeryfundepcar.html">Galery</a>
+          </div>
+        </div>
+
+        <!-- MAHANAIM BUENAVENTURA -->
+        <div class="ministerio-card">
+          <div class="card-no-photo">
+            <span>Coming soon</span>
+          </div>
+          <div class="card-content">
+            <h3>MAHANAIM BUENAVENTURA</h3>
+            <p>
+              Children's feeding center and theological support for the local church led by Sister Josefina De Avila.
+            </p>
+          </div>
+        </div>
+
+        <!-- EMBAJADORES DE ZION -->
+        <div class="ministerio-card">
+          <div class="card-no-photo">
+            <span>Coming soon</span>
+          </div>
+          <div class="card-content">
+            <h3>EMBAJADORES DE ZION</h3>
+            <p>
+              Based in Sincelejo, Pastors German and Juana Acosta support the elderly in rural towns and provide essential medical and food supplies.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="menu-responsive.js"></script>
+
+    <script>
+      // Animación al aparecer
+      const cards = document.querySelectorAll(".ministerio-card");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      });
+
+      cards.forEach((card, index) => {
+        card.style.opacity = 0;
+        card.style.transform = "translateY(50px)";
+        card.style.transition = `opacity 0.5s ease ${
+          index * 0.2
+        }s, transform 0.5s ease ${index * 0.2}s`;
+        observer.observe(card);
+      });
+
+      // Smooth scroll para el botón (agregar el ID correspondiente en tu página principal)
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

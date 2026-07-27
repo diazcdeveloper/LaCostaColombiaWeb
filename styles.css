@@ -1,0 +1,474 @@
+/* NAVBAR */
+
+.navbar {
+  width: 80%;
+  height: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 200px;
+}
+
+.navbar .enlaces {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar .enlaces li {
+  list-style: none;
+}
+
+.navbar .enlaces li a {
+  text-decoration: none;
+  color: var(--color-parrafo);
+  font-weight: 500;
+}
+
+.btn-donaciones {
+  font-size: 1rem;
+}
+
+.donacionnavidad{
+  position: relative;
+}
+
+.sombrero {
+  position: absolute;
+  width: 80px;
+  right: -37px;
+  top: -45px;
+}
+
+/* HEADER */
+
+.hidden {
+  display: none;
+}
+
+.header {
+  width: 80%;
+  height: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header :nth-child(1) {
+  width: 100%;
+}
+
+.header :nth-child(2) {
+  display: none;
+}
+
+/* QUIENES SOMOS */
+
+.quienessomos {
+  width: 80%;
+  height: 80vh;
+
+  display: flex;
+  gap: 5rem;
+}
+
+.quienessomos .letf-quiene_somos {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quienessomos .letf-quiene_somos img {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.quienessomos .right-quienes_somos {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  background-image: url("/images/banderaOpacity.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+
+/* QUE HACEMOS */
+
+.quehacemos {
+  background-color: var(--color-bg-dark);
+  width: 100%;
+  height: 80vh;
+
+  display: flex;
+  gap: 5rem;
+
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.quehacemos .letf-que_hacemos {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  color: white;
+}
+
+.quehacemos .letf-que_hacemos h2,
+.quehacemos .letf-que_hacemos p {
+  color: white;
+}
+
+.quehacemos .right-que_hacemos {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* MISION Y VISION */
+
+.mision-vision {
+  background-color: var(--color-bg-dark);
+  width: 100%;
+  height: 600px;
+
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+
+  padding: 6rem 10%;
+}
+
+.mision-vision-block {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: white;
+}
+
+.mision-vision-block h2,
+.mision-vision-block p {
+  color: white;
+}
+
+.mision-vision-divider {
+  width: 1px;
+  align-self: stretch;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.btn-ministries {
+  background-color: white;
+  color: var(--color-bg-dark);
+  letter-spacing: 3px;
+  font-weight: 400;
+
+  padding: 20px;
+  border: 1px white solid;
+}
+
+.btn-ministries:hover {
+  background-color: var(--color-bg-dark);
+  color: white;
+}
+
+/* LEGADO / IMPACT */
+
+.legado {
+  background-color: var(--color-bg-dark);
+  width: 100%;
+  padding: 6rem 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.legado-header {
+  max-width: 680px;
+}
+
+.legado-header h2,
+.legado-header p {
+  color: white;
+}
+
+.legado-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.5rem;
+}
+
+.legado-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease;
+}
+
+.legado-card:hover {
+  transform: translateY(-6px);
+}
+
+.legado-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-bg-dark);
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.legado-number--static {
+  font-size: 2rem;
+  letter-spacing: 0;
+}
+
+.legado-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-bg-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0.25rem;
+}
+
+.legado-desc {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 0.25rem;
+}
+
+/* COMO AYUDAR */
+
+.comoayudar {
+  width: 80%;
+  height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.comoayudar video {
+  width: 1000px;
+}
+
+.comoayudar .btn-donate {
+  color: white;
+  font-size: 2rem;
+  
+}
+
+.comoayudar .comoayudar-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  width: 900px;
+}
+
+.comoayudar .btn-support {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  padding: 0 4rem 0 4rem;
+}
+
+.comoayudar :hover.btn-support {
+  background-color: white;
+  color: var(--color-bg-dark);
+  border: 1px solid var(--color-bg-dark);
+  transition: all 0.3s ease-in-out;
+}
+/* NOTICIAS */
+
+.noticias {
+  width: 100%;
+  height: 80vh;
+
+  display: flex;
+  gap: 3rem;
+
+  background-color: var(--color-bg-dark);
+}
+
+.noticias .left-noticias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  width: 50%;
+  height: 100%;
+
+  padding-left: 10%;
+  padding-top: 3rem;
+
+  color: white;
+}
+
+.noticias .left-noticias h2,
+.noticias .left-noticias p {
+  color: white;
+}
+
+.noticias .left-noticias .facebook {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 3rem;
+}
+
+.noticias .right-noticias {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+
+  padding-right: 10%;
+}
+
+.noticias img {
+  width: 50%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.noticias .right-noticias a{
+  position: absolute;
+  font-size: medium;
+  font-weight: 500;
+  color: white;
+
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+/* FOOTER */
+
+.footer {
+  width: 100%;
+  height: 400px;
+
+  display: flex;
+}
+
+.footer .ubicacion {
+  height: 100%;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.footer .redes-sociales {
+  height: 100%;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer .tax {
+  font-size: 0.7rem;
+}
+
+.footer .icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer .icons svg {
+  width: 30px;
+}
+
+/* --------------- DONATION PAGE-------------------- */
+
+.donation-button-section {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 70px;
+
+  text-align: center;
+
+  background-image: url("/images/banderaOpacity.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.regular-donation-button {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.support-text {
+  padding: 0 30px 0 30px;
+}
+
+.suscription-donation-button {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  background-color: var(--color-bg-dark);
+}
+
+.suscription-button {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.candidad-suscripcion {
+  color: white;
+}

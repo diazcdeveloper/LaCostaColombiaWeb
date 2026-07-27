@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <link rel="stylesheet" href="global-styles.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="stylesheet" href="modal.css" />
+  <title>Short-term Trips La Costa Colombia</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .diario-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .viaje-articulo {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 30px;
+      margin-bottom: 60px;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .viaje-imagen {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .viaje-contenido {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .viaje-titulo {
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .viaje-fecha {
+      color: #666;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .viaje-texto {
+      line-height: 1.6;
+      color: #444;
+    }
+
+    @media (max-width: 768px) {
+      .viaje-articulo {
+        grid-template-columns: 1fr;
+      }
+
+      .viaje-imagen {
+        height: 200px;
+      }
+    }
+  </style>
+
+  <nav class="navbar" id="navbar">
+    <a class="logo" href="index.html"><img src="/images/logo.png" alt="" /></a>
+    <ul class="enlaces" id="enlaces">
+      <li class="enlace"><a href="index.html">Home</a></li>
+      <li class="enlace"><a href="news.html">News</a></li>
+    </ul>
+
+    <!-- <a
+        class="boton btn-donaciones"
+        href="https://buy.stripe.com/eVacNFeLnb7saEo3cc"
+        >Donate</a
+      > -->
+
+    <a class="boton btn-donaciones" href="donation.html">Donate</a>
+
+    <div class="menu" id="menu">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </nav>
+
+
+  <section class="diario-container">
+    <!-- Nuevos viajes se agregarán aquí al principio -->
+    <div id="viajes-lista">
+
+      <!-- Ejemplo de entrada de viaje -->
+      <article class="viaje-articulo">
+        <img src="images/news/Fame2025.jpg" alt="Viaje 3" class="viaje-imagen">
+        <div class="viaje-contenido">
+          <span class="viaje-fecha">October 19, 2025</span>
+          <h2 class="viaje-titulo">FAME is back in Colombian Coast</h2>
+          <p class="viaje-texto">This time, a small group in number, but gigantic in spirit and service, joined us. FAME
+            has always been characterized by its professionalism when carrying out missions, and this occasion was no
+            exception. From day one until the end, they were there for our brothers and sisters and community members in
+            Barranquilla, Colombia, always with lots of love and the word of God—that's how FAME's nurses, doctors, and
+            assistants always work.
+          </p>
+          <br>
+          <p><i>you can see this and much more in our Facebook</i><a
+              href="https://www.facebook.com/ColombianCoastalMission" target="_blank"> <br><br>See more</a>
+          </p>
+
+        </div>
+      </article>
+
+      <!-- Ejemplo de entrada de viaje -->
+      <article class="viaje-articulo">
+        <img src="images/news/FilterOfHopeSep2025.jpg" alt="Viaje 3" class="viaje-imagen">
+        <div class="viaje-contenido">
+          <span class="viaje-fecha">September 23, 2025</span>
+          <h2 class="viaje-titulo">Water and Words of Salvation.</h2>
+          <p class="viaje-texto">Filtros de Esperanza' (Filters of Hope) walked through the streets of the most
+            vulnerable neighborhoods in our communities. They found families and churches in need of clean water and the
+            word of God. This time, our brothers and sisters came from Two Cities Christian Church and were a great
+            blessing to everyone on the coast of Colombia. We eagerly look forward to having them with us again in
+            Barranquilla, Colombia.
+          </p>
+          <br>
+          <p><i>you can see this and much more in our Facebook</i><a
+              href="https://www.facebook.com/ColombianCoastalMission" target="_blank"> <br><br>See more</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Ejemplo de entrada de viaje -->
+      <article class="viaje-articulo">
+        <img src="images/trips/trip3.jpeg" alt="Viaje 3" class="viaje-imagen">
+        <div class="viaje-contenido">
+          <span class="viaje-fecha">Mayo 23, 2025</span>
+          <h2 class="viaje-titulo">Visit from our director, Pastor Jerry Sizemore</h2>
+          <p class="viaje-texto">During this visit, our director, Pastor Jerry Sizemore, visited and met with
+            our team in Barranquilla, Colombia. Pastors from across the city and leaders from many
+            congregations shared time to share their progress and dreams.
+            <br><br>
+            Pastoral support and accompaniment is a priority of the mission, and our team has learned to add
+            this to the hard work carried out in each of the supported projects. We thank God for the
+            fulfillment of His purpose in us.
+          </p>
+          <br>
+          <p><i>you can see this and much more in our Facebook</i><a
+              href="https://www.facebook.com/ColombianCoastalMission" target="_blank"> <br><br>See more</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Ejemplo de entrada de viaje -->
+      <article class="viaje-articulo">
+        <img src="images/trips/fameTrip-20-oct-2024.jpg" alt="Viaje 2" class="viaje-imagen">
+        <div class="viaje-contenido">
+          <span class="viaje-fecha">October 27, 2024</span>
+          <h2 class="viaje-titulo">Last medical mission of the year</h2>
+          <p class="viaje-texto">The FAME mission visited us again during the month of October. During this
+            visit, we toured different locations in Barranquilla and its surrounding areas, In this photo
+            you can see the entire team gathered on their first day sharing in Colombia.
+            <br><br>
+            The mission was a success thanks to God and the support of the local churches and missions
+            supported by La Costa Colombia.
+          </p>
+          <br>
+          <p><i>you can see this and much more in our Facebook</i><a
+              href="https://www.facebook.com/ColombianCoastalMission" target="_blank"> <br><br>See more</a>
+          </p>
+        </div>
+      </article>
+
+
+      <!-- Ejemplo de entrada de viaje -->
+      <article class="viaje-articulo">
+        <img src="images/trips/saludhoytrip.jpeg" alt="Viaje 1" class="viaje-imagen">
+        <div class="viaje-contenido">
+          <span class="viaje-fecha">April 27, 2025</span>
+          <h2 class="viaje-titulo">Salud hoy mission trip to La Guajira</h2>
+          <p class="viaje-texto">Today, the Health Foundation visited the Wayuu indigenous community in the
+            northern part of the country.
+            <br><br>
+            During this trip, they provided food and medical care. The good work of this mission is a great
+            blessing for us.
+          </p>
+          <br>
+          <p><i>you can see this and much more in our Facebook</i><a
+              href="https://www.facebook.com/ColombianCoastalMission" target="_blank"> <br><br>See more</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="viaje-articulo">
+        <img src="images/trips/elidacasafirme.jpg" alt="Viaje 1" class="viaje-imagen">
+        <div class="viaje-contenido">
+          <span class="viaje-fecha">April 13, 2025</span>
+          <h2 class="viaje-titulo">La Costa Colombia Mission trip to Sincelejo</h2>
+          <p class="viaje-texto">traveled to the city of Sincelejo to visit our allies, "Ambassadors of Zion."
+            They welcomed us and their work group to a farm near the city.
+            <br><br>
+            During our visit, a team of professionals helped us lead a talk on mental health, and we took
+            the opportunity to distribute filters so the community could have clean drinking water.
+          </p>
+          <br>
+          <p><i>you can see this and much more in our Facebook</i><a
+              href="https://www.facebook.com/ColombianCoastalMission" target="_blank"> <br><br>See more</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Otra entrada de ejemplo -->
+      <article class="viaje-articulo">
+        <img src="images/trips/fameTrip-12-sep-2024.jpg" alt="Viaje 1" class="viaje-imagen">
+        <div class="viaje-contenido">
+          <span class="viaje-fecha">September 8, 2024</span>
+          <h2 class="viaje-titulo">Medical mission in Barranquilla</h2>
+          <p class="viaje-texto">FAME brings new missionaries to participate in this beautiful work of
+            bringing the word of God and medical care to our communities. <br> <br>
+            On each visit, it's incredible to see such talented and helpful people caring for our children,
+            youth, and the elderly.
+            <br><br>
+            In this photo you can see the entire team sharing a meal with the local church staff.
+          </p>
+          <br>
+          <p><i>you can see this and much more in our Facebook</i><a
+              href="https://www.facebook.com/ColombianCoastalMission" target="_blank"> <br><br>See more</a>
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+
+  <script src="menu-responsive.js"></script>
+  <script src="modal.js"></script>
+  </body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <link rel="stylesheet" href="global-styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <title>Ministries La Costa Colombia</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        margin-bottom: 50px;
+        font-size: 2.5em;
+      }
+
+      .ministerios-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 20px;
+      }
+
+      .ministerio-card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        position: relative;
+        min-height: 350px;
+      }
+
+      .ministerio-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .card-image {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .card-content {
+        padding: 20px;
+        position: relative;
+        background: white;
+      }
+
+      .card-content h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      .card-content p {
+        color: #666;
+        font-size: 0.9em;
+        line-height: 1.5;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .ministerio-card:hover .overlay {
+        opacity: 1;
+      }
+
+      @media (max-width: 768px) {
+        .ministerios-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <a class="logo" href="index.html"
+        ><img src="/images/logo.png" alt=""
+      /></a>
+      <ul class="enlaces" id="enlaces">
+        <li class="enlace"><a href="index.html">Home</a></li>
+        <li class="enlace"><a href="news.html">News</a></li>
+      </ul>
+
+
+
+      <a class="boton btn-donaciones" href="donation.html">Donate</a>
+
+      <div class="menu" id="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>NEWS</h1>
+      <div class="ministerios-grid">
+
+
+          <div class="ministerio-card">
+          <div
+            class="card-image"
+            style="background-image: url('images/trips/trips.jpg')"
+          >
+            <div class="overlay">
+              <p>Learn more about our team's recent trips to Colombia.</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Short-term Trips</h3>
+            <p>
+              Learn more about our team's recent trips to Colombia and any other places God may lead us.
+            </p>
+            <br>
+            <a class="boton-blanco" href="/trips.html">all our trips</a>
+
+          </div>
+        </div>
+
+        <div class="ministerio-card">
+          <div
+            class="card-image"
+            style="background-image: url('images/galerypesca/imgpesca6.jpg')"
+          >
+            <div class="overlay">
+              <p>Learn more about our team's recent trips to Colombia.</p>
+            </div>
+          </div>
+          <div class="card-content">
+            <h3>Colombian missionary trips</h3>
+            <p>
+              Learn more about our trips within Colombia led by our Colombian missionaries.
+            </p>
+            <br>
+            <a class="boton-blanco" href="/colombian-trips.html">all our trips</a>
+
+          </div>
+        </div>
+
+
+
+        <!-- Repetir hasta 6 ministerios -->
+</div>
+</div>
+
+<script src="menu-responsive.js"></script>
+
+<script>
+  // Animación al aparecer
+  const cards = document.querySelectorAll(".ministerio-card");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  });
+
+  cards.forEach((card, index) => {
+    card.style.opacity = 0;
+    card.style.transform = "translateY(50px)";
+    card.style.transition = `opacity 0.5s ease ${index * 0.2
+      }s, transform 0.5s ease ${index * 0.2}s`;
+    observer.observe(card);
+  });
+
+  // Smooth scroll para el botón (agregar el ID correspondiente en tu página principal)
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+</script>
+</body>
+
+</html> -->

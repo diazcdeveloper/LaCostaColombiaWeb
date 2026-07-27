@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+    <link rel="stylesheet" href="global-styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="modal.css" />
+    <title>Colombian Trips La Costa Colombia s</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .diario-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .viaje-articulo {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            margin-bottom: 60px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .viaje-imagen {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .viaje-contenido {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .viaje-titulo {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .viaje-fecha {
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .viaje-texto {
+            line-height: 1.6;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .viaje-articulo {
+                grid-template-columns: 1fr;
+            }
+
+            .viaje-imagen {
+                height: 200px;
+            }
+        }
+    </style>
+
+    <nav class="navbar" id="navbar">
+        <a class="logo" href="index.html"><img src="/images/logo.png" alt="" /></a>
+        <ul class="enlaces" id="enlaces">
+            <li class="enlace"><a href="index.html">Home</a></li>
+            <li class="enlace"><a href="news.html">News</a></li>
+        </ul>
+
+        <!-- <a
+        class="boton btn-donaciones"
+        href="https://buy.stripe.com/eVacNFeLnb7saEo3cc"
+        >Donate</a
+      > -->
+
+        <a class="boton btn-donaciones" href="donation.html">Donate</a>
+
+        <div class="menu" id="menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+
+
+    <section class="diario-container">
+        <!-- Nuevos viajes se agregarán aquí al principio -->
+        <div id="viajes-lista">
+            <!-- Ejemplo de entrada de viaje -->
+            <article class="viaje-articulo">
+                <img src="images/trips/saludhoytrip.jpeg" alt="Viaje 1" class="viaje-imagen">
+                <div class="viaje-contenido">
+                    <span class="viaje-fecha">April 27, 2025</span>
+                    <h2 class="viaje-titulo">Salud hoy mission trip to La Guajira</h2>
+                    <p class="viaje-texto">Today, the Health Foundation visited the Wayuu indigenous community in the
+                        northern part of the country.
+                        <br><br>
+                        During this trip, they provided food and medical care. The good work of this mission is a great
+                        blessing for us.
+                    </p>
+                </div>
+            </article>
+
+            <article class="viaje-articulo">
+                <img src="images/trips/elidacasafirme.jpg" alt="Viaje 1" class="viaje-imagen">
+                <div class="viaje-contenido">
+                    <span class="viaje-fecha">April 13, 2025</span>
+                    <h2 class="viaje-titulo">La Costa Colombia Mission trip to Sincelejo</h2>
+                    <p class="viaje-texto">traveled to the city of Sincelejo to visit our allies, "Ambassadors of Zion."
+                        They welcomed us and their work group to a farm near the city.
+                        <br><br>
+                        During our visit, a team of professionals helped us lead a talk on mental health, and we took
+                        the opportunity to distribute filters so the community could have clean drinking water.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <script src="menu-responsive.js"></script>
+    <script src="modal.js"></script>
+    </body>
+
+</html>
